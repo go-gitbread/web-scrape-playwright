@@ -6,8 +6,7 @@ const epub = (epubGen as any).default ?? epubGen;
 (async () => {
       const browser = await chromium.launch({ headless: false });
       const page = await browser.newPage();
-      await page.goto('https://cherrymist.cafe/chapter/ca-chapter-1-1/?corder=asc');
-
+      await page.goto('ENTER URL HERE');
       const chapter = page.locator('div.chapter-formatting');
       await chapter.waitFor();
       const text = await chapter.innerText();
